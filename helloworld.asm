@@ -33,7 +33,7 @@ clear:
     sta $d001            ; y
 
 loop:	
-	jmp Loop
+	jmp loop
 
 * = $2000	            ; start of sprite data block (aligned)
 sprite0:
