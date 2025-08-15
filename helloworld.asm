@@ -32,8 +32,16 @@ clear:
     sta $d000            ; x
     sta $d001            ; y
 
-loop:
-    jmp loop
+loop:	
+	jmp Loop
 
-* = $2000                ; sprite data (63 bytes). Use your real data or just zero-fill for now.
-!fill 63,0
+* = $2000	            ; start of sprite data block (aligned)
+sprite0:
+!byte $00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
+!byte $00,$00,$00,$cc,$00,$01,$fe,$00,$01,$ae,$00,$01,$ae,$00,$03,$ff
+!byte $00,$07,$ff,$80,$07,$ff,$80,$03,$ff,$00,$00,$00,$00,$00,$00,$00
+!byte $00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
+
+!byte $00               ; pad to 64 bytes (VIC reads only first 63)
+; sanity check: ensure the block is exactly 64 bytes
+!if * - sprite0 <> 64 { !error "sprite0 must be exactly 64 bytes (63 data + 1 pad)" }
