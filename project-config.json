@@ -1,0 +1,13 @@
+{
+    "name": "C64-Starts",
+    "description": "Project C64-Starts",
+    "toolkit": "acme",
+    "sources": [
+        "helloworld.asm"
+    ],
+    "build": "debug",
+    "definitions": [],
+    "includes": [],
+    "args": [],
+    "compiler": ""
+}
