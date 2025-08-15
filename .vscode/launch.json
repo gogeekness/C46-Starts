@@ -1,25 +1,18 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "vice",
-            "request": "launch",
-            "name": "Launch Vice",
-            "preLaunchTask": "${defaultBuildTask}"
-        },
-        {
-            "type": "vice",
-            "request": "attach",
-            "name": "Attach Vice",
-            "hostname": "localhost",
-            "port": 6502,
-            "preLaunchTask": "${defaultBuildTask}"
-        },
-        {
-            "type": "6502",
-            "request": "launch",
-            "name": "Launch 6502",
-            "preLaunchTask": "${defaultBuildTask}"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "vice",
+      "request": "launch",
+      "name": "Run PRG in VICE",
+      "preLaunchTask": "VS64: Build Project"
+      // No "program" needed; VS64 picks the PRG from the project.
+    },
+    {
+      "type": "6502",
+      "request": "launch",
+      "name": "Launch 6502 (internal)",
+      "preLaunchTask": "VS64: Build Project"
+    }
+  ]
 }

@@ -7,7 +7,16 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "label": "build project"
+            "label": "VS64: Build Project"
+        },
+        {
+            "type": "vs64",
+            "action": "clean",
+            "problemMatcher": [
+                "$msvc"
+            ],
+            "group": "build",
+            "label": "vs64: clean"
         }
     ]
 }
