@@ -1,17 +1,17 @@
+// launch.json
 {
   "version": "0.2.0",
   "configurations": [
     {
       "type": "vice",
       "request": "launch",
-      "name": "Run PRG in VICE",
+      "name": "Run in VICE",
       "preLaunchTask": "VS64: Build Project"
-      // No "program" needed; VS64 picks the PRG from the project.
     },
     {
       "type": "6502",
       "request": "launch",
-      "name": "Launch 6502 (internal)",
+      "name": "Debug 6502",
       "preLaunchTask": "VS64: Build Project"
     }
   ]

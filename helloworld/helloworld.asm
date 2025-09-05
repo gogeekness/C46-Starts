@@ -45,7 +45,7 @@ rows_left:  !byte 0      ; 200..0
 row_idx:    !byte 0      ; 0..199
 savY:       !byte 0      ; save/restore Y in mul16u
 signflag:   !byte 0
-
+ 
 ; ===== Code at $C100 =====
 * = $C100
 
@@ -231,7 +231,7 @@ mul16u:
 
 .noadd:
     ; M <<= 1 (32-bit)
-    asl M0
+    asl M0 
     rol M1
     rol M2
     rol M3

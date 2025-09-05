@@ -1,0 +1,9 @@
+{
+  "name": "helloworld",
+  "description": "Hello World Example",
+  "toolkit": "acme",
+  "machine": "c64",
+  "sources": ["helloworld.asm"],
+  "build": "debug",
+  "buildDir": "../build/helloworld"
+}

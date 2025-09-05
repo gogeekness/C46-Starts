@@ -1,8 +1,9 @@
 {
+  "_note": "Main project config - points to hello world project",
   "name": "C64-Starts",
-  "description": "Hello World",
+  "description": "C64 Assembly Projects Collection",
   "toolkit": "acme",
   "machine": "c64",
-  "sources": [ "helloworld.asm" ],
+  "main": "helloworld/helloworld.asm",
   "build": "debug"
 }

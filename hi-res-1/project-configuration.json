@@ -1,0 +1,9 @@
+{
+  "name": "hi-res-1",
+  "description": "Hi res 1 Example",
+  "toolkit": "acme",
+  "machine": "c64",
+  "sources": ["hi-res-1.asm"],
+  "build": "debug",
+  "buildDir": "../build/hi-res-1"
+}

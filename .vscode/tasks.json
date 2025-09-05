@@ -1,3 +1,4 @@
+// tasks.json
 {
     "version": "2.0.0",
     "tasks": [
@@ -13,11 +14,24 @@
         {
             "type": "vs64",
             "action": "clean",
-            "problemMatcher": [
-                "$msvc"
+            "group": "build",
+            "label": "VS64: Clean Project"
+        },
+        {
+            "label": "Build All Projects",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "Get-ChildItem -Directory | Where-Object { Test-Path \"$_.Name/project-config.json\" } | ForEach-Object { Write-Host \"Building $($_.Name)...\" }"
             ],
             "group": "build",
-            "label": "vs64: clean"
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
         }
     ]
 }

@@ -1,0 +1,36 @@
+{
+    "_note": "Multi-project workspace for C64 assembly development",
+    "folders": [
+        {
+            "name": "HelloWorld Project",
+            "path": "./helloworld"
+        },
+        {
+            "name": "Shared Resources", 
+            "path": "./src"
+        }
+    ],
+    "_usage": "To add more projects: add new folder objects with name and path properties",
+    "settings": {
+        "vs64.acmeInstallDir": "R:\\Programming\\C-64\\VICE\\acme0.97win\\acme",
+        "vs64.viceExecutable": "R:\\Programming\\C-64\\VICE\\GTK3VICE-3.9-win64\\bin\\x64sc.exe",
+        "vs64.viceArguments": [
+            "-autostartprgmode", "1",
+            "-autostart-warp", 
+            "-silent",
+            "-limitcycles", "0"
+        ],
+        "vs64.buildDirectory": "${workspaceFolder}/../build/${workspaceFolderBasename}",
+        "vs64.autoBuild": true,
+        "vs64.logLevel": "debug",
+        "files.associations": {
+            "*.asm": "acme",
+            "*.a": "acme"
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "rosc.vs64"
+        ]
+    }
+}
