@@ -4,6 +4,6 @@
   "description": "C64 Assembly Projects Collection",
   "toolkit": "acme",
   "machine": "c64",
-  "main": "helloworld/helloworld.asm",
+  "main": "hi-res-1\\hi-res-1.asm",
   "build": "debug"
 }
